@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pilot project</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Special+Elite" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:100" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+    </head>
+    <body onload="setFirstEmptyFieldFocus(document.form);JumpField(document.form);"">
+        <header>
+        </header>
+        <main>
+            <form name = "form">
+                <label>Nome: </label></br>
+                <input type="text" maxlength="1" id="campo1" value="" onkeyup="if(this.value.length >= 1) { campo2.focus(); }"></br></br>
+                <label>Email: </label></br>
+                <input type="text" maxlength="2" id="campo2" value="" onkeyup="if(this.value.length >= 1) { campo3.focus(); }"></br></br>
+                <label>Telefone: </label></br>
+                <input type="text" maxlength="3" id="campo3" value="" onkeyup="if(this.value.length >= 1) { campo4.focus(); }"></br></br>
+                <label>CPF: </label></br>
+                <input type="text" name="cpf" id="campo4" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite o CPF no formato nnn.nnn.nnn-nn"></br></br>
+                <input type="submit">
+            </form>
+        </main>
+    <script src="js/principal.js"></script>
+    </body>
+    <footer>
+    </footer>
+</html>
